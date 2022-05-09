@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almería arena - Club de tenis</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Scripts Javascript -->
+    <script src="JS/Scripts.js"></script>
+    <!-- Fuentes Google Fonts -->
+    <!-- Allura -->
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <!-- Julius Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- Iconos Font Awesome -->
+    <script src="https://kit.fontawesome.com/f281dda798.js" crossorigin="anonymous"></script>
+    <!-- Precarga de imágenes -->
+    <link rel="preload" as="image" href="Media/Hero01.jpg">
+    <link rel="preload" as="image" href="Media/Hero02.jpg">
+    <link rel="preload" as="image" href="Media/Hero03.jpg">
+    <!--  AOS animatio library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <!-- Modal bienvenida -->
+    <div id="modalBienvenida">
+        <div id="modaleBoxB">
+            <h1>Bienvenido a Almeria Arena</h1>
+            <button id="cerrarModalBienvenida" onclick="cerrarModalBox()">continuar</button>
+        </div>
+    </div>
+    <!-- Modal Formularios -->
+    <div id="modalFormularios">
+        <div id="modalBoxF">
+            <h1 id="headerFormularios" />
+            <p id="mensajeContacto"></p>
+            <button id="cerrarModalFormularios" onclick="cerrarModalGeneral()">cerrar</button>
+        </div>
+    </div>
+    <!-- Sección Encabezado -->
+    <header id="encabezado">
+        <!-- Hero Image Carousel -->
+        <div class="fondosHero" title="Primera imagen presentación" id="fondoHero1"></div>
+        <div class="fondosHero" title="Segunda imagen presentación"  id="fondoHero2"></div>
+        <div class="fondosHero" title="Tercera imagen presentación"  id="fondoHero3"></div>
+        <!-- Menú horizontal -->
+        <nav id="navbar">
+            <ul id="menu">
+                <div class="colMenu">
+                    <div class="menuIzq">
+                        <li class="elementoMenu"><a href="#encabezado">INICIO</a></li>
+                        <li class="elementoMenu"><a href="#club">EL CLUB</a></li>
+                        <li class="elementoMenu"><a href="#escuelas">ESCUELAS</a>
+                            <ul id="submenu">
+                                <li class="elemSubmenu" onclick="marcarPestana('EscuelaIniciacion', 'tabIniciacion')"><a href="#escuelas">INICIACIÓN</a></li>
+                                <li class="elemSubmenu" onclick="marcarPestana('EscuelaPerfec', 'tabPerfec')"><a href="#escuelas">PERFECCIONAMIENTO</a></li>
+                                <li class="elemSubmenu" onclick="marcarPestana('EscuelaPreCompeticion', 'tabPreComp')"><a href="#escuelas">PRE-COMPETICIÓN</a></li>
+                                <li class="elemSubmenu" onclick="marcarPestana('EscuelaCompeticion', 'tabCompeticion')"><a href="#escuelas">COMPETICIÓN</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+                <!-- Logo club -->
+                <div class="colLogo">
+                    <a href="index.html">
+                        <img id="logo" src="Media/Logo.png" alt="Logo Almeria Arena">
+                    </a>
+                </div>
+                <!--  -->
+                <div class="colMenu">
+                    <div class="menuDcha">
+                        <li class="elementoMenu"><a href="#galeria">GALERÍA</a></li>
+                        <li class="elementoMenu"><a href="#reservas">CONTACTO</a></li>
+                        <li class="elementoMenu reservaPista"><a href="#contacto">RESERVA</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <!-- Fin menú -->
+        <h2 id="subtituloEncabezado">la pista te espera</h2>
+        <h1 id="tituloEncabezado">Almería arena</h1>
+    </header>
+    <!-- Sección Club -->
+    <section id="club">
+        <h2 data-aos="fade-up" data-aos-duration="1500" class="tituloSeccion">EL CLUB</h2>
+        <hr class="lineaSeccion" />
+        <h3 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300" class="subtituloSeccion">quienes somos</h3>
+        <div id="contenedorclub">
+            <div class="colClub">
+                <video src="Media/Video.mp4" id="videoClub" poster="Media/Video.jpg" controls></video>
+            </div>
+            <div class="colClub">
+                <p>Almería arena es un moderno centro deportivo situado en la ciudad Almería, en el barrio de de la Cañada. Inaugurado en febrero de 2012, sus 12 pistas de tenis y pádel, de las cuales 6 son de tierra, en el club de tenis de referencia de la provincia.
+                    Pero Almería arena no sólo es un espacio de enseñanza y competición deportiva. Sus objetivos, instalaciones y actividades van mucho más allá de la mera práctica del tenis o pádel. Se trata de un lugar abierto a todo el mundo, donde no es necesario hacerse socio para acceder a él. Tan sólo hay que tener ganas de disfrutar jugando un partido con los compañeros de trabajo o llevar a los niños a nuestras clases.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Escuelas -->
+    <section id="escuelas">
+        <h2 data-aos="fade-up" data-aos-duration="1500" class="tituloSeccion">ESCUELAS</h2>
+        <hr class="lineaSeccion" />
+        <h3 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300" class="subtituloSeccion">mejora tu juego</h3>
+        <div id="contenedorEtiquetasPestañas">
+            <p id="tabIniciacion" class="etiquetaPestana" onclick="marcarPestana('EscuelaIniciacion', 'tabIniciacion')">iniciación</p>
+            <p id="tabPerfec" class="etiquetaPestana" onclick="marcarPestana('EscuelaPerfec', 'tabPerfec')">perfeccionamiento</p>
+            <p id="tabPreComp" class="etiquetaPestana" onclick="marcarPestana('EscuelaPreCompeticion', 'tabPreComp')">pre-competición</p>
+            <p id="tabCompeticion" class="etiquetaPestana" onclick="marcarPestana('EscuelaCompeticion', 'tabCompeticion')">competitición</p>
+            <div class="pestanaActiva"></div>
+        </div>
+        <!-- Pestaña Iniciación -->
+        <div class="contenedorEscuelas" id="EscuelaIniciacion">
+            <div class="colEscuelas">
+                <div class="imgSeccionClub">
+                    <img class="imgClub" src="Media/escuelas/Escuelas01.jpg" alt="Imagen escuela iniciación">
+                </div>
+            </div>
+            <div class="colEscuelas">
+                <div class="rowTexto">
+                    <p>Nuestro programa de tenis de tenis de iniciación está dirigido a tod@s aquellos que quieran iniciarse en este deporte y no tengan ninguna base. Las clases se imparten de lunes a viernes a partir de las 16h pudiendo elegir entre una vez por semana o dos.</p>
+                </div>
+                <div class="rowCuotasEscuela">
+                    <div class="colCuotas">
+                        <div class="diasSemana">
+                            <p>DÍAS</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>1 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>2 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>3 / SEMANA</p>
+                        </div>
+                    </div>
+                    <div class="colCuotas">
+                        <div class="cuotaMensual">
+                            <p>CUOTA</p>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>30€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>60€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>90€ / MES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pestaña Perfeccionamiento -->
+        <div class="contenedorEscuelas" id="EscuelaPerfec">
+            <div class="colEscuelas">
+                <div class="imgSeccionClub">
+                    <img class="imgClub" src="Media/escuelas/Escuelas02.jpg" alt="Imagen escuela Perfeccionamiento">
+                </div>
+            </div>
+            <div class="colEscuelas">
+                <div class="rowTexto">
+                    <p>Nuestro programa de tenis de tenis de perfeccionamiento está dirigido a tod@s aquellos que quieran iniciarse en este deporte y no tengan ninguna base. Las clases se imparten de lunes a viernes a partir de las 16h pudiendo elegir entre una vez por semana o dos.</p>
+                </div>
+                <div class="rowCuotasEscuela">
+                    <div class="colCuotas">
+                        <div class="diasSemana">
+                            <p>DÍAS</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>1 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>2 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>3 / SEMANA</p>
+                        </div>
+                    </div>
+                    <div class="colCuotas">
+                        <div class="cuotaMensual">
+                            <p>CUOTA</p>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>35€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>70€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>100€ / MES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pestaña pre-competicion -->
+        <div class="contenedorEscuelas" id="EscuelaPreCompeticion">
+            <div class="colEscuelas">
+                <div class="imgSeccionClub">
+                    <img class="imgClub" src="Media/escuelas/Escuelas03.jpg" alt="Imagen escuela pre-competición">
+                </div>
+            </div>
+            <div class="colEscuelas">
+                <div class="rowTexto">
+                    <p>Nuestro programa de tenis de tenis de pre-competicion está dirigido a tod@s aquellos que quieran iniciarse en este deporte y no tengan ninguna base. Las clases se imparten de lunes a viernes a partir de las 16h pudiendo elegir entre una vez por semana o dos.</p>
+                </div>
+                <div class="rowCuotasEscuela">
+                    <div class="colCuotas">
+                        <div class="diasSemana">
+                            <p>DÍAS</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>2 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>3 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>5 / SEMANA</p>
+                        </div>
+                    </div>
+                    <div class="colCuotas">
+                        <div class="cuotaMensual">
+                            <p>CUOTA</p>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>40€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>80€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>120€ / MES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pestaña Competición -->
+        <div class="contenedorEscuelas" id="EscuelaCompeticion">
+            <div class="colEscuelas">
+                <div class="imgSeccionClub">
+                    <img class="imgClub" src="Media/escuelas/Escuelas04.jpg" alt="Imagen escuela competición">
+                </div>
+            </div>
+            <div class="colEscuelas">
+                <div class="rowTexto">
+                    <p>Nuestro programa de tenis de tenis de competicion está dirigido a tod@s aquellos que quieran iniciarse en este deporte y no tengan ninguna base. Las clases se imparten de lunes a viernes a partir de las 16h pudiendo elegir entre una vez por semana o dos.</p>
+                </div>
+                <div class="rowCuotasEscuela">
+                    <div class="colCuotas">
+                        <div class="diasSemana">
+                            <p>DÍAS</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>3 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>5 / SEMANA</p>
+                        </div>
+                        <div class="diasSemana">
+                            <p>7 / SEMANA</p>
+                        </div>
+                    </div>
+                    <div class="colCuotas">
+                        <div class="cuotaMensual">
+                            <p>CUOTA</p>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>50€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>100€ / MES</p>
+                            </div>
+                        </div>
+                        <div class="cuotaMensual">
+                            <div class="contenedorCuota">
+                                <p>150€ / MES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Galería -->
+    <section id="galeria">
+        <h2 data-aos="fade-up" data-aos-duration="1500" class="tituloSeccion">GALERÍA</h2>
+        <hr class="lineaSeccion" />
+        <h3 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300" class="subtituloSeccion">cónoce las instalaciones</h3>
+        <div id="contenedorFiltrosImg">
+            <div class="filtrosImg" onclick="verImagenes('pistas')">
+                <p id="pistas">pistas</p>
+            </div>
+            <div class="filtrosImg" onclick="verImagenes('piscina')">
+                <p id="piscina">piscina</p>
+            </div>
+            <div class="filtrosImg" onclick="verImagenes('cafeteria')">
+                <p id="cafeteria">cafetería</p>
+            </div>
+            <div class="filtrosImg" onclick="verImagenes('todas')">
+                <p id="todas">todas</p>
+            </div>
+        </div>
+        <div id="contenedorGaleria">
+            <div class="imagenesGal" >
+                <img class="imgGaleria" src="Media/G01.jpg" alt="pistas" role="button"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G02.jpg" alt="cafeteria"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G03.jpg" alt="cafeteria"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G04.jpg" alt="piscina"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G05.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G06.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G07.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G08.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G09.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G10.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G11.jpg" alt="pistas"></div>
+            <div class="imagenesGal">
+                <img class="imgGaleria" src="Media/G12.jpg" alt="piscina"></div>
+        </div>
+        <!-- LightBox Galería -->
+        <div id="modalLightboxGaleria">
+            <div id="imagenAMostrar">
+            </div>
+            <button class="lbButtons lbbLeft" onclick="prevImgGaleria()"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="lbButtons lbbRight" onclick="nextImgGaleria()"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </section>
+    <!-- Sección Reservas -->
+    <section id="reservas" data-parallax="scroll" data-image-src="./Media/fondo-reservas.jpeg" data-speed='0.2'>
+        <h2 class="tituloSeccion titulosBlanco" data-aos="fade-up" data-aos-duration="1500">RESERVAS</h2>
+        <hr class="lineaSeccion lineaSeccionBlanca" />
+        <h3 class="subtituloSeccion titulosBlanco" data-aos-duration="1500" data-aos-delay="300">disfruta de nuestras instalaciones</h3>
+        <form action="#" id="formularioReservas">
+            <div class="colReservas">
+                <input class="inputTransparent" id="reNombre" type="text" name="Nombre" placeholder="Nombre y apellidos" required>
+                <input class="inputTransparent" id="rePersonas" type="number" name="Personas" placeholder="Numero personas" required>
+                <input class="inputTransparent" id="reFecha" type="date" name="Fecha" placeholder="Fecha" required>
+                <input class="inputTransparent" id="reHorario" type="time" name="Horario" placeholder="Horario" required>
+            </div>
+            <div class="colReservas">
+                <input class="inputTransparent" id="reTel" type="tel" name="Telefono" placeholder="Teléfono contacto" required>
+                <input class="inputTransparent" id="rePista" type="text" name="Pista" placeholder="Tipo Pista" required>
+                <textarea class="inputTransparent" rows="4" cols="50" name="consulta" placeholder="Observaciones"></textarea>
+            </div>
+            <input id="botonReservas" onclick="modalGeneral('reservas')" value="ENVIAR" type="button">
+        </form>
+    </section>
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2 data-aos="fade-up" data-aos-duration="1500" class="tituloSeccion">CONTACTO</h2>
+        <hr class="lineaSeccion" />
+        <h3 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300" class="subtituloSeccion">resolvemos tus dudas </h3>
+        <div id="contenedorContacto">
+            <form action="#" id="formularioContacto"  >
+                <p id="textoContacto">Dirección / Camino Jaúl Bajo 3, 04007 Almería</p>
+                <p id="textoContacto">Horario / Lunes a domingo de 8:00h a 24:00h</p>
+                <input id="formNombre" type="text" name="Nombre" placeholder="Nombre y apellidos" aria-label="Nombre y apellidos" required>
+                <input id="formMail" type="email" name="Email" placeholder="Email" aria-label="Nombre y apellidos" required>
+                <input id="formTel" type="tel" name="Telefono" placeholder="Teléfono"  aria-label="Teléfono" required>
+                <textarea id="formConsulta" rows="4" cols="50" name="consulta" placeholder="Consulta" aria-label="Consulta" required></textarea>
+                <input id="botonEnviar" onclick="modalGeneral('contacto')" value="ENVIAR" type="button">
+            </form> required
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6814.016860696232!2d-2.4324372183066347!3d36.8294441171901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7a9dc55208c5e9%3A0xa27f83b79bdaacfd!2sClub%20Natacion%20Almeria!5e0!3m2!1ses!2ses!4v1646409822405!5m2!1ses!2ses" width="600" height="508" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- Acordeon preguntas frecuentes -->
+        <div id="accordeon">
+            <div class="cabeceraAcordeon">
+                <p>¿Qué siginfica ser socio titular?</p><i class="fas fa-angle-down"></i>
+            </div>
+            <div class="contenedorAccordeon">
+                <p>SOCIO TITULAR</p>
+                <p>Socio propietario del Club en una parte alícuota patrimonial mediante la posesión de un Título Social transmisible. Este Título confiere la plenitud de derechos recogidos en los Estatutos Sociales del Club. El valor nominal del Título se puede recuperar en caso de su venta por el socio.</p>
+                <p>IMPORTE TITULO</p>
+                <p>Importe total 1.600 € (1.200 € de valor nominal y 400 € de cuota de entrada o transmisión por gastos de gestión). Queda exceptuado del abono de la cuota por gastos de gestión la transmisión de títulos sociales de socios titulares a sus hijos y descendientes en los supuestos en que el socio titular pase a ser socio senior.</p>
+                <p>La cuota de entrada se abona en el momento de la inscripción, pudiéndose pagar los 1200 € en 24 meses (50€/mes). (En este caso sin derecho a voto hasta finalización del pago)</p>
+                <p>La cuota mensual es de:</p>
+                <p>57 € socio titular familiar</p>
+                <p>52 € socio titular individual</p>
+            </div>
+            <div class="cabeceraAcordeon">
+                <p>¿Qué siginfica ser socio deportivo?</p><i class="fas fa-angle-down"></i>
+            </div>
+            <div class="contenedorAccordeon">
+                <p>Socio no propietario del Club, que pagando una cuota mensual superior a la cuota del socio titular tiene los mismos derechos que éste salvo el de votar en la Asamblea General de Socios y el poder formar parte en los órganos de gobierno del Club (Junta Directiva), así como de las invitaciones anuales y un precio superior al de socio titular en las Escuelas del Club (pero inferior a los no socios).</p>
+                <p>Socio deportivo “sólo mañanas”. Se trata de un socio deportivo individual que tiene limitado el uso de instalaciones a las mañanas de lunes a viernes en horario de 8 a 14 horas. No admite la modalidad familiar.</p>
+                <p> Existe en la actualidad un límite de 50 socios deportivos como máximo, por lo que llegado a este número se formalizará lista de espera. El tiempo máximo de permanencia como socio deportivo bajo cualquier modalidad será de 6 meses.</p>
+                <p>CUOTA MENSUAL
+                    <p> La cuota mensual actual por unidad familiar es de 60 € y 58 € individual. El pago se hará por anticipado abonándose las 6 mensualidades en el momento de formalizar la inscripción.</p>
+                    <p> La cuota mensual del socio “sólo mañanas” es de 28 € y deberá abonarse íntegramente el importe de 6 mensualidades en el momento de formalizar la inscripción.</p>
+                    <p> La totalidad de las cuotas abonadas por los socios deportivos durante el tiempo de permanencia de 6 meses serán descontadas de los gastos de gestión en el supuesto de que soliciten su inclusión como socios titulares. El ingreso como socio deportivo, finalmente, habrá de ser autorizado por la Junta Directiva.</p>
+            </div>
+            <div class="cabeceraAcordeon">
+                <p>¿Qué documentación necesito para hacerme socio?</p><i class="fas fa-angle-down"></i>
+            </div>
+            <div class="contenedorAccordeon">
+                <p>DOCUMENTACIÓN A PRESENTAR PARA EL ALTA DE NUEVO SOCIO:</p>
+                <br />
+                <p>IMPRESO RELLENO Y FIRMADO DE INGRESO EN EL CLUB</p>
+                <p> FOTOCOPIA D.N.I. DEL TITULAR Y DE CADA UNO DE LOS MIEMBROS DE LA UNIDAD FAMILIAR EN SU CASO</p>
+                <p> FOTOCOPIA DEL DOCUMENTO DE AFILIACIÓN A LA SEG. SOCIAL, MUTUA O COMPAÑÍA ASEGURADORA</p>
+                <p> FOTOGRAFÍA TAMAÑO CARNET DEL TITULAR (Y DE CADA MIEMBRO DE LA UNIDAD FAMILIAR, EN SU CASO)</p>
+                <p> NÚMERO DE CUENTA CORRIENTE PARA LA DOMICILIACIÓN DE LAS CUOTAS MENSUALES</p>
+                <p> CERFICADO INGRESO EN LA CUENTA 0182 1809 01 0018500107 (BBVA) DE LA CUOTA DE ENTRADA (SOCIO TITULAR) O DE LOS MESES DE CUOTA ANTICIPADOS (SOCIOS DEPORTIVOS)</p>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Footer -->
+    <footer id="pie">
+        <!-- Sub-sección Servicios -->
+        <div id="footerServicios">
+            <div class="contenedorImagenesServicios">
+                <div class="colServicios">
+                    <p>Pistas rápidas</p>
+                    <div class="imgServicioContainer ">
+                        <img data-aos="zoom-in-up" data-aos-delay="100" class="imgServicio" src="Media/servicios/raquetas.png" alt="8 Pistas Greenset">
+                        <div class="serviciosTooltip">
+                            <p>8 Pistas GreenSet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colServicios">
+                    <p>Tierra batida</p>
+                    <div class="imgServicioContainer">
+                        <img data-aos="zoom-in-up" data-aos-delay="200" class="imgServicio" src="Media/servicios/pistatennis.png" alt="12 Pistas de Tierra">
+                        <div class="serviciosTooltip">
+                            <p>12 Pistas de Tierra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colServicios">
+                    <p>Indoor</p>
+                    <div class="imgServicioContainer">
+                        <img data-aos="zoom-in-up" data-aos-delay="300" class="imgServicio" src="Media/servicios/indoor.png" alt="4 Pistas indoor Greenset">
+                        <div class="serviciosTooltip">
+                            <p>4 Pistas Indoor GreenSet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colServicios">
+                    <p>Pista Multideportiva</p>
+                    <div class="imgServicioContainer">
+                        <img data-aos="zoom-in-up" data-aos-delay="400" class="imgServicio" src="Media/servicios/multideporte.png" alt="1 Pista Multideportiva">
+                        <div class="serviciosTooltip">
+                            <p>1 Pista Multideporte</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colServicios">
+                    <p>Piscina</p>
+                    <div class="imgServicioContainer">
+                        <img data-aos="zoom-in-up" data-aos-delay="500" class="imgServicio" src="Media/servicios/piscina.png" alt="1 Piscina Olímipica">
+                        <div class="serviciosTooltip">
+                            <p>1 Piscina Olímpica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="colServicios">
+                    <p>Restaurante</p>
+                    <div class="imgServicioContainer">
+                        <img data-aos="zoom-in-up" data-aos-delay="600" class="imgServicio" src="Media/servicios/restaurante.png" alt="Restaurante con comida para deportistas">
+                        <div class="serviciosTooltip">
+                            <p>Comida para deportistas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sub-sección Social -->
+        <div id="footerSocial">
+            <div class="contenedorSocial">
+                <div class="colSocial">
+                    <p>© Amería Arena 2022</p>
+                </div>
+                <div class="colSocial">
+                    <div class="contenedorIconos">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fab fa-instagram-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    AOS.init();
+    </script>
+    <script>
+    //modalBienvenida();
+    mostrarLightboxGal();
+    Acordeon();
+    // setInterval(heroSlideshow, 3000);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./JS/parallax.js"></script>
+
+</html>
